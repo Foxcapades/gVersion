@@ -1,0 +1,41 @@
+= gVersion
+
+A simple version string representation/parser for dealing with version strings
+as their individual components.
+
+Additionally, this library imports no stdlib packages apart from `unsafe`.
+
+.Example
+[source, go]
+----
+func ExampleParse() {
+	version := "v1.23.0-alpha+b58"
+
+	ver, _ := semver.Parse(version)
+
+	fmt.Println(ver.Major)
+	fmt.Println(ver.Minor)
+	fmt.Println(ver.Patch)
+	fmt.Println(ver.Prerelease)
+	fmt.Println(ver.Build)
+
+	// Output:
+	// 1
+	// 23
+	// 0
+	// [alpha]
+	// [b58]
+}
+----
+
+Version types are comparable using the methods `Equal`, `Equivalent`,
+`IsBefore`, and `IsAfter`.
+
+*_Equal vs Equivalent_*
+
+The `Equal` method compares all components of 2 Version structs, including the
+prerelease and build tags.
+
+The `Equivalent` method compares 2 Version structs following the semantic
+versioning rule that gives `1.0.0` and `1.0.0+b23` the same precedence in
+version ordering.
