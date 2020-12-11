@@ -1,5 +1,13 @@
 = gVersion
 
+image:https://img.shields.io/github/v/tag/foxcapades/gVersion[GitHub tag (latest SemVer)]
+image:https://img.shields.io/github/go-mod/go-version/foxcapades/gVersion[GitHub go.mod Go version]
+image:https://img.shields.io/github/license/foxcapades/gVersion[GitHub]
+image:https://img.shields.io/badge/api-docs-ff69b4[title="API Docs", link=https://pkg.go.dev/github.com/foxcapades/gVersion/v1/pkg/semver]
+image:https://github.com/Foxcapades/gVersion/workflows/Go/badge.svg[Go]
+image:https://codecov.io/gh/Foxcapades/gVersion/branch/main/graph/badge.svg?token=E4WD9IURJL[title=codecov, link=https://codecov.io/gh/Foxcapades/gVersion]
+
+
 A simple version string representation/parser for dealing with version strings
 as their individual components.
 
